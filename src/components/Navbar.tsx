@@ -71,6 +71,7 @@ const Navbar = () => {
                             <li><a className="block px-4 py-2 text-sm text-main-text hover:underline hover:text-gray-500" href="/service3">Service 3</a></li>
                         </ul>
                     </li>
+                    <li><a className="text-sm text-main-text hover:underline hover:text-gray-500" href="/testimonials">Testimonials</a></li>
                     <li><a className="text-sm text-main-text hover:underline hover:text-gray-500" href="/contact">Contact</a></li>
                 </ul>
             </nav>
