@@ -1,6 +1,8 @@
 
 const Footer = () => {
-  return (
+
+    const currentYear = new Date().getFullYear();
+    return (
     <footer className="bg-main-bg rounded-t-lg shadow mt-auto pt-[160px]">
         <div className="w-full max-w-screen-2xl mx-auto p-4 md:py-8">
             <div className="sm:flex sm:items-center sm:justify-between">
@@ -27,10 +29,10 @@ const Footer = () => {
                 </ul>
             </div>
             <hr className="my-6 border-gray-200 sm:mx-auto lg:my-8" />
-            <span className="block text-sm text-gray-500 sm:text-center  my-32">© 2023 <a href="https://flowbite.com/" className="hover:underline">Flowbite™</a>. All Rights Reserved.</span>
+            <span className="block text-sm text-gray-500 sm:text-center  my-32">© {currentYear}. All Rights Reserved.</span>
         </div>
     </footer>
-  )
+    )
 }
 
 export default Footer
