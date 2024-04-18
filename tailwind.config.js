@@ -1,0 +1,91 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      // backgroundImage: {
+      //   'eye-closed': "url('/static/svg/icon-eye-closed.svg')",
+      // },
+      borderRadius: {
+        'round-1': '2px',
+        'round-2': '4px',
+        'round-3': '6px',
+        'round-4': '8px',
+        'round-5': '12px',
+        'round-6': '16px',
+        'round-7': '24px',
+        'round-8': '100%',
+      },
+      boxShadow: {
+        'shadow-1': '0px 20px 13px 0px rgba(0, 0, 0, 0.03), 0px 8px 5px 0px rgba(0, 0, 0, 0.08)',
+        'shadow-2':
+          ' 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px -4px 4px 0px rgba(0, 0, 0, 0.13) inset;',
+        'shadow-3':
+          '0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset, 0px 2px 1px 0px rgba(0, 0, 0, 0.06);',
+      },
+      colors: {
+        white: '#fff',
+        'main-bg': '#191919',
+        'main-text': '#f1f1f1',
+      },
+      fontSize: {
+        'text-xs': '12px',
+        'text-s': '14px',
+        'text-base': '16px',
+        'text-lg': '17px',
+        'text-xl': '20px',
+        'text-2xl': '24px',
+        'text-3xl': '30px',
+        'text-4xl': '36px',
+        'text-5xl': '48px',
+        'text-6xl': '60px',
+        'text-7xl': '72px',
+        'text-8xl': '96px',
+        'text-9xl': '128px',
+      },
+      fontWeight: {
+        'font-regular': 400,
+        'font-semi': 600,
+        'font-bold': 700,
+      },
+      lineHeight: {
+        'leading-3': '12px',
+        'leading-4': '16px',
+        'leading-5': '20px',
+        'leading-6': '24px',
+        'leading-7': '28px',
+        'leading-8': '32px',
+        'leading-9': '36px',
+        'leading-10': '40px',
+        'leading-none': '100%',
+        'leading-tight': '125%',
+        'leading-snug': '137.5%',
+        'leading-normal': '150%',
+        'leading-relaxed': '162.5%',
+        'leading-loose': '200%',
+      },
+      screens: {
+        sm: '640px',
+        md: '768px',
+        lg: '1024px',
+        xl: '1280px',
+        xxl: '1536px',
+      },
+      spacing: {
+        16: '16px',
+        20: '20px',
+        24: '24px',
+        26: '26px',
+        32: '32px',
+        40: '40px',
+        48: '48px',
+        64: '64px',
+        80: '80px',
+      },
+    },
+  },
+  plugins: [],
+}

@@ -1,10 +1,31 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import App from './App.tsx'
+import About from './pages/About.tsx';
 import './index.css'
+
+// local imports
+import Navbar from './components/Navbar.tsx'
+import Footer from './components/Footer.tsx'
+import CoreEnergetics from './pages/CoreEnergetics.tsx';
+import Services from './pages/Services.tsx';
+import Testimonials from './pages/Testimonials.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
-    <App />
+    <Navbar />
+    <div className="flex flex-col mt-[110px]">
+      <Router>
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/core-energetics" element={<CoreEnergetics />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/testimonials" element={<Testimonials />} />
+        </Routes>
+      </Router>
+    </div>
+    <Footer />
   </React.StrictMode>,
 )
