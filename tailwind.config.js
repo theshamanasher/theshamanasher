@@ -75,6 +75,7 @@ export default {
         xxl: '1536px',
       },
       spacing: {
+        8: "8px",
         16: '16px',
         20: '20px',
         24: '24px',
