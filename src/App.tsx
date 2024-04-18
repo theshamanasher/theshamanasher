@@ -10,7 +10,7 @@ function App() {
     <>
     <div></div>
     <ParallaxHero 
-        title="Welcome to Our Website!" 
+        title="The Shaman Asher" 
         imageUrl={heroImg} // Replace with your image URL
     />
         

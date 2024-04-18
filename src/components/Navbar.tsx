@@ -24,9 +24,9 @@ const Navbar = () => {
                         <li>
                             <a href="/about" className="text-main-text hover:underline">About</a>
                         </li>
-                        <li>
+                        {/* <li>
                             <a href="/core-energetics" className="text-main-text hover:underline">Core Energetics</a>
-                        </li>
+                        </li> */}
                         <li>
                             <a href="/services" className="text-main-text hover:underline">Services</a>
                         </li>
