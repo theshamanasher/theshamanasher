@@ -64,7 +64,7 @@ const Navbar = () => {
                     <li><a className="text-sm text-main-text hover:underline hover:text-gray-500" href="/">Home</a></li>
                     <li><a className="text-sm text-main-text hover:underline hover:text-gray-500" href="/about">About</a></li>
                     <li className="relative group">
-                        <a className="text-sm text-main-text hover:underline hover:text-gray-500 cursor-pointer">Services</a>
+                        <a href="/services" className="text-sm text-main-text hover:underline hover:text-gray-500 cursor-pointer">Services</a>
                         <ul className="absolute hidden group-hover:block bg-main-bg shadow-lg rounded py-1 top-full left-0 w-[200px] border-l border-l-text-main border-b border-b-text-main border-r border-r-text-main">
                             <li><a className="block px-4 py-2 text-sm text-main-text hover:underline hover:text-gray-500" href="/service1">Service 1</a></li>
                             <li><a className="block px-4 py-2 text-sm text-main-text hover:underline hover:text-gray-500" href="/service2">Service 2</a></li>

@@ -11,6 +11,7 @@ import Footer from './components/Footer.tsx'
 import CoreEnergetics from './pages/CoreEnergetics.tsx';
 import Services from './pages/Services.tsx';
 import Testimonials from './pages/Testimonials.tsx';
+import Contact from './pages/Contact.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -23,6 +24,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/core-energetics" element={<CoreEnergetics />} />
           <Route path="/services" element={<Services />} />
           <Route path="/testimonials" element={<Testimonials />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Router>
     </div>
