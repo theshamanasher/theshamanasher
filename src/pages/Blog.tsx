@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import client from '../sanityclient'
 import imageUrlBuilder from '@sanity/image-url'
-import BlogCard from './BlogCard';
+import BlogCard from '../components/BlogCard';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 
@@ -50,63 +50,24 @@ function formatDate(isoDate: string): string {
   }
 
 
-function BlogGrid() {
+function Blog() {
   const [posts, setPosts] = useState<Post[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
 
 
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch('https://bkxt2s2x.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%22post%22%5D%7B%0A++++++++title%2C%0A++++++++slug%2C%0A++++++++_updatedAt%2C%0A++++++++body%5B0%5D%7B%0A++++++++++children%5B0%5D%7B%0A++++++++++++text%2C%0A++++++++++%7D%2C%0A++++++++%0A++++++++%7D%2C%0A++++++++author-%3E+%7B%0A++++++++++name%0A++++++++%7D%2C%0A++++++++mainImage%7B%0A++++++++++asset-%3E%7B%0A++++++++++++_id%2C%0A++++++++++++URL%2C%0A++++++++%7D%0A++++++%7D%0A++++%7D');
-//         if (!response.ok) {
-//           throw new Error('Network response was not ok');
-//         }
-//         const data = await response.json();
-//         setPosts(data.result || []);
-//       } catch (error) {
-//         setError('error');
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchData();
-//   }, []);
-
-
-
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const query = `*[_type == "post"] | order(_updatedAt desc) [0...3] {
-          title,
-          slug,
-          _updatedAt,
-          body[0] {
-            children[0] {
-              text
-            }
-          },
-          author-> {
-            name
-          },
-          mainImage {
-            asset-> {
-              _id,
-              URL
-            }
-          }
-        }`;
-
-        const response = await client.fetch(query);
-
-        setPosts(response || []);
+        const response = await fetch('https://bkxt2s2x.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%22post%22%5D%7B%0A++++++++title%2C%0A++++++++slug%2C%0A++++++++_updatedAt%2C%0A++++++++body%5B0%5D%7B%0A++++++++++children%5B0%5D%7B%0A++++++++++++text%2C%0A++++++++++%7D%2C%0A++++++++%0A++++++++%7D%2C%0A++++++++author-%3E+%7B%0A++++++++++name%0A++++++++%7D%2C%0A++++++++mainImage%7B%0A++++++++++asset-%3E%7B%0A++++++++++++_id%2C%0A++++++++++++URL%2C%0A++++++++%7D%0A++++++%7D%0A++++%7D');
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        const data = await response.json();
+        setPosts(data.result || []);
       } catch (error) {
-        setError('Error fetching posts');
+        setError('error');
       } finally {
         setLoading(false);
       }
@@ -116,7 +77,7 @@ function BlogGrid() {
   }, []);
 
 
- 
+
 
   if (loading) return <div>Loading...</div>;
   if (error) return <div>Error: {error}</div>;
@@ -143,4 +104,4 @@ function BlogGrid() {
   )
 }
 
-export default BlogGrid
+export default Blog

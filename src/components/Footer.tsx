@@ -25,6 +25,9 @@ const Footer = () => {
                         <a href="/services" className="hover:underline me-4 md:me-6 text-main-text font-light">Services</a>
                     </li>
                     <li>
+                        <a href="/blog" className="hover:underline me-4 md:me-6 text-main-text font-light">Blog</a>
+                    </li>
+                    <li>
                         <a href="/testimonials" className="hover:underline me-4 md:me-6 text-main-text font-light">Testimonials</a>
                     </li>
                     <li>
