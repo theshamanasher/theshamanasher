@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 import client from '../sanityclient'
 import imageUrlBuilder from '@sanity/image-url'
 import BlogCard from './BlogCard';
+import { SanityImageSource } from '@sanity/image-url/lib/types/types';
 
 
 // Define an interface representing the shape of the data
 interface Post {
   title: string;
-  slug: string;
+  slug: {
+    current: string;
+  }
   _updatedAt: string;
   author: {
     name: string;
@@ -25,14 +28,26 @@ interface Post {
   };
 }
 
-  // Get a pre-configured url-builder from your sanity client
+const BASE_URL = "/";
+
+
+// Get a pre-configured url-builder from your sanity client
 const builder = imageUrlBuilder(client)
 
 
 // parameters:
-function urlFor(source) {
+function urlFor(source: SanityImageSource) {
     return builder.image(source)
 }
+
+// Helper function to format the date to dd/mm/yyyy
+function formatDate(isoDate: string): string {
+    const date = new Date(isoDate);
+    const day = String(date.getDate()).padStart(2, '0');
+    const month = String(date.getMonth() + 1).padStart(2, '0'); // months are zero-based
+    const year = date.getFullYear();
+    return `${day}/${month}/${year}`;
+  }
 
 
 function BlogGrid() {
@@ -51,9 +66,8 @@ function BlogGrid() {
         }
         const data = await response.json();
         setPosts(data.result || []);
-        console.log('lol data', data.result || [])
       } catch (error) {
-        setError(error.message);
+        setError('error');
       } finally {
         setLoading(false);
       }
@@ -74,10 +88,10 @@ function BlogGrid() {
             id={index.toString()}  // Convert index to a string
             title={post.title}
             desc={post.body.children.text}
-            articleURL={` / /${post.slug}`} // Prepend base URL here
+            articleURL={`${BASE_URL}${post.slug.current}`} // Construct the final article URL correctly
             imgURL={urlFor(post.mainImage).url()}
             author={post.author.name}
-            updatedAt={post.body._updatedAt}
+            updatedAt={formatDate(post._updatedAt)} // Format the date
         />
       ))}
 
