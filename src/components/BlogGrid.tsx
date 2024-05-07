@@ -28,7 +28,7 @@ interface Post {
   };
 }
 
-const BASE_URL = "/";
+const BASE_URL = "/blog/";
 
 
 // Get a pre-configured url-builder from your sanity client

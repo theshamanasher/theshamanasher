@@ -12,6 +12,8 @@ import CoreEnergetics from './pages/CoreEnergetics.tsx';
 import Services from './pages/Services.tsx';
 import Testimonials from './pages/Testimonials.tsx';
 import Contact from './pages/Contact.tsx';
+import BlogGrid from './components/BlogGrid.tsx';
+import PostPage from './pages/PostPage.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -19,6 +21,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <div className="flex flex-col mt-[110px]">
       <Router>
         <Routes>
+          <Route path="/blog" element={<BlogGrid />} />
+          <Route path="/blog/:slug" element={<PostPage />} />
           <Route path="/" element={<App />} />
           <Route path="/about" element={<About />} />
           <Route path="/core-energetics" element={<CoreEnergetics />} />
