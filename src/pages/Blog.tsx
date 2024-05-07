@@ -79,8 +79,8 @@ function Blog() {
 
 
 
-  if (loading) return <div>Loading...</div>;
-  if (error) return <div>Error: {error}</div>;
+  if (loading) return <div className='w-full flex justify-center items-center'>Loading...</div>;
+  if (error) return <div className='w-full flex justify-center items-center'>Error: {error}</div>;
 
 
   return (
