@@ -11,11 +11,11 @@ import 'swiper/css/scrollbar';
 import ParallaxHero from './components/ParallaxHero';
 import heroImg from './assets/img/demo/demo-hero.jpg'
 import Title from './components/Title';
-import BlogCard from './components/BlogCard';
+import BlogGrid from './components/BlogGrid';
+
 
 
 function App() {
-
   return (
     <>
     <div></div>
@@ -61,51 +61,7 @@ function App() {
       />
     </div>
 
-    {/* blog section */}
-    <div className="flex flex-wrap justify-center mt-10 gap-32"> 
-      <BlogCard 
-        title="Test blog" 
-        desc="This is a test blog"
-        articleURL='/'
-        imgURL='https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg'
-        />
-
-<BlogCard 
-        title="Test blog" 
-        desc="This is a test blog"
-        articleURL='/'
-        imgURL='https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg'
-        />
-
-<BlogCard 
-        title="Test blog" 
-        desc="This is a test blog"
-        articleURL='/'
-        imgURL='https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg'
-        />
-
-<BlogCard 
-        title="Test blog" 
-        desc="This is a test blog"
-        articleURL='/'
-        imgURL='https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg'
-        />
-
-<BlogCard 
-        title="Test blog" 
-        desc="This is a test blog"
-        articleURL='/'
-        imgURL='https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg'
-        />
-
-<BlogCard 
-        title="Test blog" 
-        desc="This is a test blog"
-        articleURL='/'
-        imgURL='https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg'
-        />
-    </div>
-
+    <BlogGrid />
         
     </>
   )
