@@ -29,6 +29,8 @@ interface Post {
 }
 
 const BASE_URL = "/blog/";
+// const projectId = process.env.REACT_APP_SANITY_URL;
+
 
 
 // Get a pre-configured url-builder from your sanity client
