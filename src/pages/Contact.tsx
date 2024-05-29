@@ -1,32 +1,28 @@
-import React, { useRef, useState } from 'react';
+import { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 
 
 const Contact = () => {
   const [successfulSubmission, setSuccessfulSubmission] = useState(false);
+  const form = useRef<HTMLFormElement>(null);
 
-  const form = useRef();
-
-  const sendEmail = (e: { preventDefault: () => void; }) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(form)
-
-    emailjs
-      .sendForm('service_7vlvm3u', 'template_fdjfxht', form.current, {
-        publicKey: '3s4MnL3-iCP2IDB21',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-          setSuccessfulSubmission(true)
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
+    if (form.current) {
+      emailjs
+        .sendForm('service_7vlvm3u', 'template_fdjfxht', form.current, '3s4MnL3-iCP2IDB21')
+        .then(
+          () => {
+            console.log('SUCCESS!');
+            setSuccessfulSubmission(true);
+          },
+          (error) => {
+            console.log('FAILED...', error.text);
+          },
+        );
+    }
   };
-
 
 
   return (
