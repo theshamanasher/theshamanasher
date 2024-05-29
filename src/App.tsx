@@ -7,11 +7,17 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import './styles/swiper.css'
 //local imports
 import ParallaxHero from './components/ParallaxHero';
 import heroImg from './assets/img/demo/demo-hero.jpg'
 import Title from './components/Title';
 import BlogGrid from './components/BlogGrid';
+
+import demo1 from './assets/img/demo/demo-1.jpg'
+import demo2 from './assets/img/demo/demo-2.jpg'
+import demo3 from './assets/img/demo/demo-3.jpg'
+import demo4 from './assets/img/demo/demo-4.jpg'
 
 
 
@@ -43,15 +49,17 @@ function App() {
         scrollbar={{ draggable: true }}
       >
         <SwiperSlide>
-          <img src="https://www.shutterstock.com/shutterstock/photos/1040229760/display_1500/stock-photo-pink-bright-texture-for-designer-background-gentle-classic-texture-colorful-background-colorful-1040229760.jpg" />
+          <img className='w-full' src={demo1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://png.pngtree.com/thumb_back/fh260/background/20230408/pngtree-rainbow-curves-abstract-colorful-background-image_2164067.jpg" />
+          <img className='w-full' src={demo2} />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvdjU0NmJhdGNoMy1teW50LTM0LWJhZGdld2F0ZXJjb2xvcl8xLmpwZw.jpg" />
+          <img className='w-full' src={demo3} />
         </SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
+        <SwiperSlide>
+          <img className='w-full' src={demo4} />
+        </SwiperSlide>
       </Swiper>
     </div>
 
