@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react';
 import client from '../sanityclient';
 import imageUrlBuilder from '@sanity/image-url';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
-import Hero from "../components/Hero";
 import Title from "../components/Title";
 
 interface Biography {
