@@ -56,29 +56,6 @@ function BlogGrid() {
   const [error, setError] = useState<string | null>(null);
 
 
-
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await fetch('https://bkxt2s2x.api.sanity.io/v2022-03-07/data/query/production?query=*%5B_type+%3D%3D+%22post%22%5D%7B%0A++++++++title%2C%0A++++++++slug%2C%0A++++++++_updatedAt%2C%0A++++++++body%5B0%5D%7B%0A++++++++++children%5B0%5D%7B%0A++++++++++++text%2C%0A++++++++++%7D%2C%0A++++++++%0A++++++++%7D%2C%0A++++++++author-%3E+%7B%0A++++++++++name%0A++++++++%7D%2C%0A++++++++mainImage%7B%0A++++++++++asset-%3E%7B%0A++++++++++++_id%2C%0A++++++++++++URL%2C%0A++++++++%7D%0A++++++%7D%0A++++%7D');
-//         if (!response.ok) {
-//           throw new Error('Network response was not ok');
-//         }
-//         const data = await response.json();
-//         setPosts(data.result || []);
-//       } catch (error) {
-//         setError('error');
-//       } finally {
-//         setLoading(false);
-//       }
-//     };
-
-//     fetchData();
-//   }, []);
-
-
-
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -130,7 +107,7 @@ function BlogGrid() {
             id={index.toString()}  // Convert index to a string
             title={post.title}
             desc={post.body.children.text}
-            articleURL={`${BASE_URL}${post.slug.current}`} // Construct the final article URL correctly
+            articleURL={`${BASE_URL}${post.slug?.current || 'no-slug'}`} // Add fallback for slug
             imgURL={urlFor(post.mainImage).url()}
             author={post.author.name}
             updatedAt={formatDate(post._updatedAt)} // Format the date

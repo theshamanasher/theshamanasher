@@ -22,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-query": "^3.39.3",
     "react-router-dom": "^6.22.3",
+    "react-social-media-embed": "^2.5.13",
     "swiper": "^11.1.1"
   },
   "proxy": "https://bkxt2s2x.api.sanity.io",

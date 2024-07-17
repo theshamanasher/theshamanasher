@@ -36,3 +36,5 @@ coverage/
 
 
 .eslintrc.cjs
+
+sanity_queries.txt

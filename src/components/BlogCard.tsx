@@ -11,7 +11,7 @@ interface BlogCardProps {
     updatedAt: string;
 }
 
-// Helper function to truncate text to a specific number of characters
+// truncates text to a specific number of characters
 function truncateText(text: string, limit: number): string {
     if (text.length > limit) {
       return text.substring(0, limit) + '...';
@@ -20,7 +20,7 @@ function truncateText(text: string, limit: number): string {
   }
   
 
-// Define the BlogCard component with props parameter
+// Defines the BlogCard component with props 
 const BlogCard: React.FC<BlogCardProps> = ({ author, id, articleURL, imgURL,  title, desc, updatedAt}) => {
   const truncatedDesc = desc ? truncateText(desc, 150) : '';
 
@@ -58,7 +58,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ author, id, articleURL, imgURL,  ti
                 </a>
 
                 <div className="flex items-center">
-                    <p className="mb-3 font-normal text-sm text-main-text  mt-8 mr-8">{author}</p>
+                    <a href='/about/' className="mb-3 font-normal text-sm text-main-text  mt-8 mr-8 hover:underline">{author}</a>
                     <p className="mb-3 font-normal text-sm text-main-text  mt-8">{updatedAt}</p>
                 </div>
             </div>

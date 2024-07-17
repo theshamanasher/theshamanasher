@@ -13,6 +13,7 @@ import ParallaxHero from './components/ParallaxHero';
 import heroImg from './assets/img/demo/demo-hero.jpg'
 import Title from './components/Title';
 import BlogGrid from './components/BlogGrid';
+import Instagram from './components/Instagram';
 
 import demo1 from './assets/img/demo/demo-1.jpg'
 import demo2 from './assets/img/demo/demo-2.jpg'
@@ -61,6 +62,10 @@ function App() {
           <img className='w-full' src={demo4} />
         </SwiperSlide>
       </Swiper>
+    </div>
+
+    <div className="flex flex-col mt-48 sm:mt-64">
+      <Instagram />
     </div>
 
     <div className="flex flex-col mt-48 sm:mt-64">
