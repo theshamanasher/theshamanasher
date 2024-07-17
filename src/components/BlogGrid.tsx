@@ -10,7 +10,7 @@ interface Post {
   title: string;
   slug: {
     current: string;
-  }
+  } | null;
   _updatedAt: string;
   author: {
     name: string;
