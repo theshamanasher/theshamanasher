@@ -55,11 +55,10 @@ function BlogGrid() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
-
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const query = `*[_type == "post"] | order(_updatedAt desc) [0...3] {
+        const query = `*[_type == "post" && !(_id in path("drafts.**")) && !("BIO" in categories[]->title)] | order(_updatedAt desc) [0...3] {
           title,
           slug,
           _updatedAt,
