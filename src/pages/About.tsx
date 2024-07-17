@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import client from '../sanityclient';
 import imageUrlBuilder from '@sanity/image-url';
 import { SanityImageSource } from '@sanity/image-url/lib/types/types';
+import Hero from "../components/Hero";
 import Title from "../components/Title";
 
 interface Biography {
@@ -84,36 +85,40 @@ const About = () => {
 
   return (
     <div className='flex flex-col w-full'>
-      {/* <Hero 
-        bannerImage='https://static.wixstatic.com/media/cfda65_b5177bd271454af09b59ad42c820eed1~mv2_d_2048_1367_s_2.jpeg/v1/fill/w_1789,h_460,fp_0.37_0.43,q_85,usm_0.66_1.00_0.01,enc_auto/cfda65_b5177bd271454af09b59ad42c820eed1~mv2_d_2048_1367_s_2.jpeg'
-        text='About' 
-      /> */}
-
-      <div className="flex flex-col w-full px-32 sm:px-16 max-w-[1080px] justify-center items-center m-auto ">
         {bio.map((post, index) => (
           <div key={index} className="mt-16 flex flex-col items-center">
-            <Title title={post.title} />
+
             {post.mainImage && post.mainImage.asset && (
-              <img
-                src={urlFor(post.mainImage.asset)}
-                alt={post.title}
-                className="w-full h-auto mt-64 rounded-full max-w-256"
-              />
+              <Hero bannerImage={urlFor(post.mainImage.asset)} />
             )}
-            <div className="mt-32 text-center font-light">
-              {post.body?.map((block, blockIndex) => (
-                <p key={blockIndex} className="mt-8">
-                  {block.children?.map((child, childIndex) => (
-                    <span className="text-[#aabcbf] font-light" key={childIndex}>{child.text}</span>
-                  ))}
-                </p>
-              ))}
+
+            <div className="w-full max-w-[1080px] mt-64 flex flex-col items-center">
+              <div className='mt-64 flex w-full'>
+                <Title title={post.title} />
+              </div>
+              
+              {post.mainImage && post.mainImage.asset && (
+                <img
+                  src={urlFor(post.mainImage.asset)}
+                  alt={post.title}
+                  className="w-full h-auto mt-64 rounded-full max-w-256"
+                />
+              )}
+              <div className="mt-64 text-center font-light">
+                {post.body?.map((block, blockIndex) => (
+                  <p key={blockIndex} className="mt-16">
+                    {block.children?.map((child, childIndex) => (
+                      <span className="text-light font-light" key={childIndex}>{child.text}</span>
+                    ))}
+                  </p>
+                ))}
+              </div>
+              <p className="mt-16 text-center font-bold">- {post.author?.name}</p>
             </div>
-            <p className="mt-16 text-center font-bold">- {post.author?.name}</p>
+
           </div>
         ))}
       </div>
-    </div>
   );
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 interface HeroProps {
   bannerImage: string;
-  text: string;
+  text?: string;
 }
 
 const Hero: React.FC<HeroProps> = ({ bannerImage, text }) => {
