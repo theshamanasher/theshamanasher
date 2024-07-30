@@ -58,7 +58,7 @@ function BlogGrid() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const query = `*[_type == "post" && !(_id in path("drafts.**")) && !("BIO" in categories[]->title)] | order(_updatedAt desc) [0...3] {
+        const query = `*[_type == "post" && !(_id in path("drafts.**")) && !("BIO" in categories[]->title) && !("Testimonial" in categories[]->title)] | order(_updatedAt desc) [0...3] {
           title,
           slug,
           _updatedAt,
@@ -73,7 +73,7 @@ function BlogGrid() {
           mainImage {
             asset-> {
               _id,
-              URL
+              url
             }
           }
         }`;
