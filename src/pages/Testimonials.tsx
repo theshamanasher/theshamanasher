@@ -1,7 +1,87 @@
-import demoImg from '../assets/img/demo/demo-1.jpg'
+import { useEffect, useState } from 'react';
+import client from '../sanityclient';
+import demoImg1 from '../assets/img/demo/demo-1.jpg'
+import demoImg2 from '../assets/img/demo/demo-2.jpg'
+import demoImg3 from '../assets/img/demo/demo-3.jpg'
+import demoImg4 from '../assets/img/demo/demo-4.jpg'
+
+
+interface Testimonial {
+  title: string;
+  slug: {
+    current: string;
+  } | null;
+  _updatedAt: string;
+  author: {
+    name: string;
+  };
+  body: {
+    children: {
+      text: string;
+    }[];
+  }[];
+  mainImage: {
+    asset: {
+      _id: string;
+      url: string;
+    };
+  } | null;
+  categories: {
+    title: string;
+  }[];
+}
 
 
 const Testimonials = () => {
+  const [testimonials, setTestimonials] = useState<Testimonial[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const query = `*[_type == "post" && !(_id in path("drafts.**")) && ("Testimonial" in categories[]->title)]{
+          title,
+          slug,
+          _updatedAt,
+          body[]{
+            children[]{
+              text
+            }
+          },
+          author-> {
+            name
+          },
+          mainImage{
+            asset->{
+              _id,
+              url
+            }
+          },
+          categories[]->{
+            title
+          }
+        }`;
+        const response = await client.fetch(query);
+        setTestimonials(response || []);
+        console.log('Fetched Testimonials:', response); // Log the response to check the data
+        setTestimonials(response || []);
+      } catch (error) {
+        setError('Error fetching data');
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  if (loading) return <div className='w-full flex justify-center items-center'>Loading...</div>;
+  if (error) return <div className='w-full flex justify-center items-center'>Error: {error}</div>;
+
+  const demoImages = [demoImg1, demoImg2, demoImg3, demoImg4];
+
+
   return (
     <div className="flex flex-col">
     {/* header */}
@@ -13,75 +93,25 @@ const Testimonials = () => {
     </div>
     {/* grid */}
     <ul className="grid w-full">
-      <li className="flex flex-row items-start">
-        <img src={demoImg} alt="demo" className="w-1/2" />
-        <div className="container flex w-1/2 justify-center items-start h-full bg-white">
-          <div className="flex flex-col items-center flex-s p-64 h-full justify-center">
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">My mom had just passed away from cancer and I was dealing with an enormous amount of grief, on top of all of my other mental issues. I have terrible sciatica and injuries from sports so I am in constant pain. Shaman Asher truly is completely connected and I felt the realignments happening within my body, the pain leaving my hips, my neck, and my head especially as he worked with me. At the end of the session, I felt pain-free in every way, with clarity in my head and that’s always a mess. Afterward, the best and most productive weeks I had in years were presented to me. He was able to heal physical pain no doctor has been able to make any better, I highly recommend Shaman Asher! 
-            </span>
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">
-            - Lauren Kranz
-            </span>
-          </div>
-        </div>
-      </li>
 
-      <li className="flex items-start flex-row-reverse">
-        <img src={demoImg} alt="demo" className="w-1/2" />
-        <div className="container flex w-1/2 justify-center items-start h-full bg-white">
-          <div className="flex flex-col items-center flex-s p-64 h-full justify-center">
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            </span>
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">
-            - Test Author
-            </span>
+      {testimonials.map((testimonial, index) => (
+        <li 
+          className={`flex flex-row items-start ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}   
+          key={index.toString()} 
+          id={index.toString()} >
+          <img src={demoImages[index % demoImages.length]} alt="demo" className="w-1/2" />
+          <div className="container flex w-1/2 justify-center items-start h-full bg-white">
+            <div className="flex flex-col items-center flex-s p-64 h-full justify-center">
+              <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">My mom had just  {testimonial.body[0]?.children[0]?.text || 'No description available'}
+              </span>
+              <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">
+              - {testimonial.author.name}
+              </span>
+            </div>
           </div>
-        </div>
-      </li>
+        </li>
+      ))}
 
-      {/*  double */}
-      <li className="flex flex-row">
-       <div className="flex flex-row">
-       <img src={demoImg} alt="demo" className="w-1/2" />
-        <div className="container flex w-1/2 justify-center items-start h-full bg-white">
-          <div className="flex flex-col items-center flex-s p-64 h-full justify-center">
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            </span>
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">
-            - Test Author
-            </span>
-          </div>
-        </div>
-       </div>
-       <div className="flex flex-row">
-       <img src={demoImg} alt="demo" className="w-1/2" />
-        <div className="container flex w-1/2 justify-center items-start h-full bg-white">
-          <div className="flex flex-col items-center flex-s p-64 h-full justify-center">
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo co
-              nsequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-            </span>
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">
-            - Test Author
-            </span>
-          </div>
-        </div>
-       </div>
-      </li>
-      {/* end double */}
-
-      <li className="flex items-start">
-        <img src={demoImg} alt="demo" className="w-1/2" />
-        <div className="container flex w-1/2 justify-center items-start h-full bg-white">
-          <div className="flex flex-col items-center flex-s p-64 h-full justify-center">
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu 
-            </span>
-            <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">
-            - Test Author
-            </span>
-          </div>
-        </div>
-      </li>
-      
     </ul>
   </div>
   )

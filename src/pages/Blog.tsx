@@ -57,7 +57,7 @@ function Blog() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const query = `*[_type == "post" && !(_id in path("drafts.**")) && !("BIO" in categories[]->title)]{
+        const query = `*[_type == "post" && !(_id in path("drafts.**")) && !("BIO" in categories[]->title) && !("Testimonial" in categories[]->title)]{
           title,
           slug,
           _updatedAt,
