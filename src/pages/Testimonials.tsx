@@ -85,10 +85,10 @@ const Testimonials = () => {
   return (
     <div className="flex flex-col">
     {/* header */}
-    <div className="flex w-full bg-white justify-center py-64 sm:py-[120px] border-b-2">
+    <div className="flex w-full bg-white justify-center p-32 sm:py-64 md:py-[120px] border-b-2">
       <div className="flex flex-col items-center w-full max-w-[550px]">
-        <h1 className="mt-8 text-[#495153] text-6xl font-light">Testimonials</h1>
-        <span className="text-xl  text-[#495153] font-light mt-32">What is Everyone Saying?</span>
+        <h1 className="mt-8 text-[#495153] text-4xl md:text-6xl font-light">Testimonials</h1>
+        <span className="text-xl  text-[#495153] font-light mt-16 sm:mt-32">What is Everyone Saying?</span>
       </div>
     </div>
     {/* grid */}
@@ -96,12 +96,12 @@ const Testimonials = () => {
 
       {testimonials.map((testimonial, index) => (
         <li 
-          className={`flex flex-row items-start ${index % 2 === 1 ? 'flex-row-reverse' : ''}`}   
+          className={`flex flex-col sm:flex-row items-start ${index % 2 === 1 ? 'sm:flex-row-reverse' : ''}`}   
           key={index.toString()} 
           id={index.toString()} >
-          <img src={demoImages[index % demoImages.length]} alt="demo" className="w-1/2" />
-          <div className="container flex w-1/2 justify-center items-start h-full bg-white">
-            <div className="flex flex-col items-center flex-s p-64 h-full justify-center">
+          <img src={demoImages[index % demoImages.length]} alt="demo" className="w-full sm:w-1/2" />
+          <div className="container flex w-full sm:w-1/2 justify-center items-start h-full bg-white">
+            <div className="flex flex-col items-center flex-s p-16 sm:p-32 dm:p-64 h-full justify-center">
               <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">My mom had just  {testimonial.body[0]?.children[0]?.text || 'No description available'}
               </span>
               <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">

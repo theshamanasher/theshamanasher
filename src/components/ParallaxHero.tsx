@@ -18,8 +18,8 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({ title, subtitle,  imageUrl }
 
   return (
     <div style={sectionStyle} className="flex justify-center sm:justify-start items-center">
-        <div className="flex flex-col justify-start items-start sm:ml-36">
-            <h1 className="text-white text-4xl font-bold text-center ">{title}</h1>
+        <div className="flex flex-col justify-start items-start sm:ml-36 px-16">
+            <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-bold text-center ">{title}</h1>
             <p className="mt-8">{subtitle}</p>
         </div>
     </div>

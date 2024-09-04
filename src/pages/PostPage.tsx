@@ -88,7 +88,7 @@ function PostPage() {
         <div className="flex w-full bg-[#344245] justify-center py-64 sm:py-[120px] border-b-2">
             <div className="flex flex-col items-center w-full max-w-[768px]">
             <img src={urlFor(post.mainImage).url()} alt={post.title}  className="object-cover aspect-[16/9]" />
-            <h1 className=" text-[#aabcbf] text-6xl font-light mt-16">{post.title}</h1>
+            <h1 className=" text-[#aabcbf] text-4xl md:text-6xl font-light mt-16">{post.title}</h1>
             <span className="text-xl  text-[#aabcbf] font-light mt-8">By:  {post.author.name}</span>
             <span className="text-md  text-[#aabcbf] font-light mt-8"> {new Date(post._updatedAt).toLocaleDateString()}</span>
             <span className="text-base  text-[#aabcbf] mt-32 text-center leading-relaxed font-light"> {firstBlockText}</span>

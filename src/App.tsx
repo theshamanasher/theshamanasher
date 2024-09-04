@@ -39,7 +39,7 @@ function App() {
       />
     </div>
 
-    <div className="flex w-full  m-auto mt-64 max-w-screen-xxl">
+    <div className="flex w-full  m-auto mt-32 sm:mt-64 max-w-screen-xxl">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}

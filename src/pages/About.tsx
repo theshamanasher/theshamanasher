@@ -93,7 +93,7 @@ const About = () => {
             )}
 
             <div className="w-full max-w-[1080px] mt-64 flex flex-col items-center">
-              <div className='mt-64 flex w-full'>
+              <div className='sm:mt-64 flex w-full'>
                 <Title title={post.title} />
               </div>
               
@@ -101,10 +101,10 @@ const About = () => {
                 <img
                   src={urlFor(post.mainImage.asset)}
                   alt={post.title}
-                  className="w-full h-auto mt-64 rounded-full max-w-256"
+                  className="w-full h-auto mt-16 sm:mt-64 rounded-full max-w-256"
                 />
               )}
-              <div className="mt-64 text-center font-light">
+              <div className="mt-16 sm:mt-64 text-center font-light">
                 {post.body?.map((block, blockIndex) => (
                   <p key={blockIndex} className="mt-16">
                     {block.children?.map((child, childIndex) => (

@@ -32,13 +32,11 @@ const BlogCard: React.FC<BlogCardProps> = ({ author, id, articleURL, imgURL,  ti
         </a>
         <div className="flex flex-col p-5 h-full">
             <a href={articleURL} >
-                <h5 className="mb-2 text-2xl font-bold tracking-tight text-main-text">{title}</h5>
+                <h5 className="sm:mb-2 text-xl sm:text-2xl font-bold tracking-tight text-main-text">{title}</h5>
             </a>
-            
-            <p className="mb-3 font-normal text-main-text mt-8 leading-relaxed">{truncatedDesc}</p>
-
+            <p className="font-normal text-main-text sm:mt-8 sm:mb-3 leading-relaxed">{truncatedDesc}</p>
             <div className="flex-flex-col justify-start mt-auto">
-            <a href={articleURL} className="group inline-flex items-center text-sm font-medium text-center text-main-text bg-[#344245] rounded-lg mt-16" >
+            <a href={articleURL} className="group inline-flex items-center text-sm font-medium text-center text-main-text bg-[#344245] rounded-lg sm:mt-16" >
                 Read more
                 <svg
                     className="rtl:rotate-180 w-3.5 h-3.5 ms-2 group-hover:scale-125 transition-transform duration-200"
@@ -58,8 +56,8 @@ const BlogCard: React.FC<BlogCardProps> = ({ author, id, articleURL, imgURL,  ti
                 </a>
 
                 <div className="flex items-center">
-                    <a href='/about/' className="mb-3 font-normal text-sm text-main-text  mt-8 mr-8 hover:underline">{author}</a>
-                    <p className="mb-3 font-normal text-sm text-main-text  mt-8">{updatedAt}</p>
+                    <a href='/about/' className="font-normal text-sm text-main-text sm:mb-3 mt-8 mr-8 hover:underline">{author}</a>
+                    <p className="sm:mb-3 font-normal text-sm text-main-text  mt-8">{updatedAt}</p>
                 </div>
             </div>
         </div>
