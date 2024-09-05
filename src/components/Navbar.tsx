@@ -92,13 +92,16 @@ const Navbar = () => {
                             <a className="block p-4 text-sm font-semibold text-main-text hover:bg-main-text hover:text-main-bg rounded" href="/">Home</a>
                         </li>
                         <li className="mb-1">
-                            <a className="block p-4 text-sm font-semibold text-main-text hover:bg-main-text hover:text-main-bg rounded" href="/about">About Us</a>
+                            <a className="block p-4 text-sm font-semibold text-main-text hover:bg-main-text hover:text-main-bg rounded" href="/about">About</a>
                         </li>
                         <li className="mb-1">
                             <a className="block p-4 text-sm font-semibold text-main-text hover:bg-main-text hover:text-main-bg rounded" href="/services">Services</a>
                         </li>
                         <li className="mb-1">
-                            <a className="block p-4 text-sm font-semibold text-main-text hover:bg-main-text hover:text-main-bg rounded" href="/pricing">Pricing</a>
+                            <a className="block p-4 text-sm font-semibold text-main-text hover:bg-main-text hover:text-main-bg rounded" href="/blog">Blog</a>
+                        </li>
+                        <li className="mb-1">
+                            <a className="block p-4 text-sm font-semibold text-main-text hover:bg-main-text hover:text-main-bg rounded" href="/testimonials">Testimonials</a>
                         </li>
                         <li className="mb-1">
                             <a className="block p-4 text-sm font-semibold text-main-text hover:bg-main-text hover:text-main-bg rounded" href="/contact">Contact</a>
