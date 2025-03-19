@@ -2,16 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+
 * {
-  font-family: "Lugrasimo", cursive;
+  color: #f1f1f1;
+  font-family: "Cinzel Decorative", serif;
   font-weight: 400;
   font-style: normal;
 }
 
-
-* {
-  color: #f1f1f1;
+h1, h2 {
+  font-family: "Lugrasimo", cursive !important;
+  font-weight: 400;
 }
+
 
 #root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
