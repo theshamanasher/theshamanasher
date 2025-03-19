@@ -94,7 +94,7 @@ const About = () => {
 
             <div className="w-full max-w-[1080px] mt-64 flex flex-col items-center">
               <div className='sm:mt-64 flex w-full'>
-                <Title title={post.title} />
+                <Title title={post.title} subtitle={post.title} />
               </div>
               
               {post.mainImage && post.mainImage.asset && (
