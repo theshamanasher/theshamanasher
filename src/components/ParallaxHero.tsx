@@ -23,6 +23,15 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({
     position: "relative",
   };
 
+  const textBorderStyle: React.CSSProperties = {
+    textShadow: `
+      -1px -1px 0 #000,
+      1px -1px 0 #000,
+      -1px 1px 0 #000,
+      1px 1px 0 #000
+    `,
+  };
+
   return (
     <div
       style={sectionStyle}
@@ -33,16 +42,25 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({
         id="innerContainer" 
         className="flex flex-col justify-start items-center sm:items-start sm:ml-10 px-4 sm:px-16 relative z-20 w-full max-w-[750px] transform translate-y-[-40%] md:translate-y-0"
       >
-        <h1 className="text-white text-3xl sm:text-4xl md:text-6xl font-bold text-center">
+        <h1 
+          className="text-white text-3xl sm:text-4xl md:text-6xl font-bold text-center"
+          style={textBorderStyle}
+        >
           {title}
         </h1>
         {subtitle1 && (
-          <p className="mt-8 text-white text-lg sm:text-xl md:text-2xl text-center sm:text-left">
+          <p 
+            className="mt-8 text-white text-lg sm:text-xl md:text-2xl text-center sm:text-left"
+            style={textBorderStyle}
+          >
             {subtitle1}
           </p>
         )}
         {subtitle2 && (
-          <p className="mt-8 text-white text-lg sm:text-xl md:text-2xl text-center sm:text-left">
+          <p 
+            className="mt-8 text-white text-lg sm:text-xl md:text-2xl text-center sm:text-left"
+            style={textBorderStyle}
+          >
             {subtitle2}
           </p>
         )}
