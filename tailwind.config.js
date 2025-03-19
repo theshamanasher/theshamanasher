@@ -25,6 +25,7 @@ export default {
           ' 0px 4px 4px 0px rgba(255, 255, 255, 0.25) inset, 0px -4px 4px 0px rgba(0, 0, 0, 0.13) inset;',
         'shadow-3':
           '0px 2px 2px 0px rgba(255, 255, 255, 0.25) inset, 0px 2px 1px 0px rgba(0, 0, 0, 0.06);',
+        'hover': '0 8px 30px rgba(0,0,0,0.12)',
       },
       colors: {
         white: '#fff',
@@ -50,6 +51,10 @@ export default {
         'font-regular': 400,
         'font-semi': 600,
         'font-bold': 700,
+      },
+      gradientColorStops: {
+        'from-30': '30%',
+        'to-100': '100%',
       },
       lineHeight: {
         'leading-3': '12px',
@@ -86,6 +91,7 @@ export default {
         64: '64px',
         80: '80px',
         128: '128px',
+        144: '144px',
         256: '256px',
       },
     },

@@ -16,7 +16,6 @@ import BlogGrid from './components/BlogGrid';
 import Instagram from './components/Instagram';
 
 import demo1 from './assets/img/demo/demo-1.jpg'
-import demo2 from './assets/img/demo/demo-2.jpg'
 import demo3 from './assets/img/demo/demo-3.jpg'
 import demo4 from './assets/img/demo/demo-4.jpg'
 
@@ -28,7 +27,8 @@ function App() {
     <div></div>
     <ParallaxHero 
         title="The Shaman Asher" 
-        subtitle="Yoga, Reiki, Breathwork, Retreats, Events,"
+        subtitle1="A Richmond based Ordained Shaman. "
+        subtitle2="Providing in-person and Virtual Services."
         imageUrl={heroImg} // Replace with your image URL
     />
 
@@ -53,9 +53,6 @@ function App() {
           <img className='w-full' src={demo1} />
         </SwiperSlide>
         <SwiperSlide>
-          <img className='w-full' src={demo2} />
-        </SwiperSlide>
-        <SwiperSlide>
           <img className='w-full' src={demo3} />
         </SwiperSlide>
         <SwiperSlide>
@@ -64,9 +61,9 @@ function App() {
       </Swiper>
     </div>
 
-    <div className="flex flex-col mt-48 sm:mt-64">
+    {/* <div className="flex flex-col mt-48 sm:mt-64">
       <Instagram />
-    </div>
+    </div> */}
 
     <div className="flex flex-col mt-48 sm:mt-64">
       <Title 
