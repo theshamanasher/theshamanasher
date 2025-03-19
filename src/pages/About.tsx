@@ -56,7 +56,7 @@ const About = () => {
             }
           },
           author-> {
-            name
+            name,
           },
           mainImage{
             asset->{
@@ -69,6 +69,7 @@ const About = () => {
           }
         }`;
         const response = await client.fetch(query);
+        console.log('Sanity API response:', response);
         setBio(response || []);
       } catch (error) {
         setError('Error fetching data');
@@ -85,6 +86,7 @@ const About = () => {
 
   return (
     <div className='flex flex-col w-full'>
+      
         {bio.map((post, index) => (
           <div key={index} className="mt-16 flex flex-col items-center">
 
@@ -93,8 +95,9 @@ const About = () => {
             )}
 
             <div className="w-full max-w-[1080px] mt-64 flex flex-col items-center">
-              <div className='sm:mt-64 flex w-full'>
-                <Title title={post.title} subtitle={post.title} />
+              <div className='sm:mt-64 flex flex-col items-center w-full'>
+                <span>About</span>
+                <Title title="The Shaman Asher" />
               </div>
               
               {post.mainImage && post.mainImage.asset && (
