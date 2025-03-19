@@ -13,7 +13,7 @@ import ParallaxHero from './components/ParallaxHero';
 import heroImg from './assets/img/demo/demo-hero.jpg'
 import Title from './components/Title';
 import BlogGrid from './components/BlogGrid';
-import Instagram from './components/Instagram';
+// import Instagram from './components/Instagram';
 
 import demo1 from './assets/img/demo/demo-1.jpg'
 import demo3 from './assets/img/demo/demo-3.jpg'
