@@ -103,7 +103,7 @@ const Testimonials = () => {
           <img src={demoImages[index % demoImages.length]} alt="demo" className="w-full sm:w-1/2" />
           <div className="container flex w-full sm:w-1/2 justify-center items-start h-full bg-white">
             <div className="flex flex-col items-center flex-s p-16 sm:p-32 dm:p-64 h-full justify-center">
-              <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">My mom had just  {testimonial.body[0]?.children[0]?.text || 'No description available'}
+              <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light"> {testimonial.body[0]?.children[0]?.text || 'No description available'}
               </span>
               <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">
               - {testimonial.author.name}
