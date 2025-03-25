@@ -21,7 +21,8 @@ function truncateText(text: string, limit: number): string {
   
 
 // Defines the BlogCard component with props 
-const BlogCard: React.FC<BlogCardProps> = ({ author, id, articleURL, imgURL,  title, desc, updatedAt}) => {
+// const BlogCard: React.FC<BlogCardProps> = ({ author, id, articleURL, imgURL,  title, desc, updatedAt}) => {
+  const BlogCard: React.FC<BlogCardProps> = ({ author, id, articleURL, imgURL,  title, desc}) => {
   const truncatedDesc = desc ? truncateText(desc, 150) : '';
 
     
@@ -59,7 +60,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ author, id, articleURL, imgURL,  ti
 
                 <div className="flex items-center">
                     <a href='/about/' className="font-normal text-sm text-main-text sm:mb-3 mt-8 mr-8 hover:underline">{author}</a>
-                    <p className="sm:mb-3 font-normal text-sm text-main-text  mt-8">{updatedAt}</p>
+                    {/* <p className="sm:mb-3 font-normal text-sm text-main-text  mt-8">{updatedAt}</p> */}
                 </div>
             </div>
         </div>

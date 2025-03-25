@@ -32,7 +32,7 @@ const Contact = () => {
           <div className="flex flex-col items-center w-full max-w-[550px]">
             <h1 className="mt-8 text-[#aabcbf] text-4xl md:text-6xl font-light">Contact</h1>
 
-            <span className="text-base  text-[#aabcbf] mt-32 text-center leading-relaxed font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</span>
+            {/* <span className="text-base  text-[#aabcbf] mt-32 text-center leading-relaxed font-light">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</span> */}
           </div>
         </div>
 
