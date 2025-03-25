@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import client from '../sanityclient';
 import demoImg1 from '../assets/img/demo/demo-1.jpg'
+import demoImg2 from '../assets/img/demo/demo-2.jpg'
 import demoImg3 from '../assets/img/demo/demo-3.jpg'
 import demoImg4 from '../assets/img/demo/demo-4.jpg'
+import demoImg5 from '../assets/img/demo/demo-5.jpg'
 
 
 interface Testimonial {
@@ -78,7 +80,7 @@ const Testimonials = () => {
   if (loading) return <div className='w-full flex justify-center items-center'>Loading...</div>;
   if (error) return <div className='w-full flex justify-center items-center'>Error: {error}</div>;
 
-  const demoImages = [demoImg1, demoImg3, demoImg4];
+  const demoImages = [demoImg1, demoImg2, demoImg3, demoImg4, demoImg5];
 
 
   return (
