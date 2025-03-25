@@ -111,7 +111,7 @@ const About = () => {
                 {post.body?.map((block, blockIndex) => (
                   <p key={blockIndex} className="mt-16">
                     {block.children?.map((child, childIndex) => (
-                      <span className="text-light font-light" key={childIndex}>{child.text}</span>
+                      <span className="text-light font-light text-white leading-2" key={childIndex}>{child.text}</span>
                     ))}
                   </p>
                 ))}
