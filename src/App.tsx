@@ -18,7 +18,8 @@ import BlogGrid from './components/BlogGrid';
 import demo1 from './assets/img/demo/demo-1.jpg'
 import demo3 from './assets/img/demo/demo-3.jpg'
 import demo4 from './assets/img/demo/demo-4.jpg'
-
+import demo6 from './assets/img/demo/demo-5.jpg'
+import demo7 from './assets/img/demo/demo-6.jpg'
 
 
 
@@ -51,11 +52,17 @@ function App() {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
       >
-        <SwiperSlide>
-          <img className='w-full' src={demo1} />
+         <SwiperSlide>
+          <img className='w-full' src={demo7} />
+        </SwiperSlide>
+         <SwiperSlide>
+          <img className='w-full' src={demo6} />
         </SwiperSlide>
         <SwiperSlide>
           <img className='w-full' src={demo3} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img className='w-full' src={demo1} />
         </SwiperSlide>
         <SwiperSlide>
           <img className='w-full' src={demo4} />
