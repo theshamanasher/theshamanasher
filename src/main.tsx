@@ -18,7 +18,7 @@ import PostPage from './pages/PostPage.tsx';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <Navbar />
-    <div className="flex flex-col sm:mt-[110px]">
+    <div className="flex flex-col sm:mt-[64px]">
       <Router>
         <Routes>
           <Route path="/blog" element={<Blog />} />
