@@ -106,7 +106,7 @@ const Testimonials = () => {
               <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light"> {testimonial.body[0]?.children[0]?.text || 'No description available'}
               </span>
               <span className="text-base  text-[#495153] mt-32 text-center leading-relaxed font-light">
-              - {testimonial.author.name}
+              - {testimonial.author?.name || 'Anonymous'}
               </span>
             </div>
           </div>
