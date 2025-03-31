@@ -5,6 +5,7 @@ import iconShaman from '../assets/icons/icon-shaman.png'
 import iconClose from '../assets/icons/icon-close.svg'
 
 
+
 const Navbar = () => {
     const currentYear = new Date().getFullYear();
 
@@ -65,10 +66,10 @@ const Navbar = () => {
                     <li><a className="text-sm text-main-text hover:underline hover:text-gray-500" href="/about">About</a></li>
                     <li className="relative group">
                         <a href="/services" className="text-sm text-main-text hover:underline hover:text-gray-500 cursor-pointer">Services</a>
-                        <ul className="absolute hidden group-hover:block bg-main-bg shadow-lg rounded py-1 top-full left-0 w-[200px] border-l border-l-text-main border-b border-b-text-main border-r border-r-text-main">
-                            <li><a className="block px-4 py-2 text-sm text-main-text hover:underline hover:text-gray-500" href="/service1">Service 1</a></li>
-                            <li><a className="block px-4 py-2 text-sm text-main-text hover:underline hover:text-gray-500" href="/service2">Service 2</a></li>
-                            <li><a className="block px-4 py-2 text-sm text-main-text hover:underline hover:text-gray-500" href="/service3">Service 3</a></li>
+                        <ul className="absolute hidden group-hover:block bg-main-bg shadow-lg rounded py-1 top-full left-0 w-[300px] border-l border-l-text-main border-b border-b-text-main border-r border-r-text-main">
+                            <li><a className="block px-4 py-2 text-sm text-main-text hover:text-gray-500" href="/services/shaman-blessed-moon-water" >Shaman Blessed Moon Water</a></li>
+                            <li><a className="block px-4 py-2 text-sm text-main-text hover:text-gray-500" href="/services/cleansing-and-protection">Smudging -House Cleansing and Protection</a></li>
+                            <li><a className="block px-4 py-2 text-sm text-main-text  hover:text-gray-500" href="/services/dream-interpretation/">Dream Interpretation</a></li>
                         </ul>
                     </li>
                     <li><a className="text-sm text-main-text hover:underline hover:text-gray-500" href="/blog">Blog</a></li>

@@ -14,6 +14,9 @@ import Testimonials from './pages/Testimonials.tsx';
 import Contact from './pages/Contact.tsx';
 import Blog from './pages/Blog.tsx';
 import PostPage from './pages/PostPage.tsx';
+import ShamanBlessedMoonWater from './pages/services/shamam-blessed-moon-water.tsx';
+import CleansingAndProtection from './pages/services/cleansing-and-protection.tsx';
+import DreamInterpretation from './pages/services/dream-interpretation.tsx';
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -27,6 +30,9 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
           <Route path="/about" element={<About />} />
           <Route path="/core-energetics" element={<CoreEnergetics />} />
           <Route path="/services" element={<Services />} />
+          <Route path="/services/shaman-blessed-moon-water" element={<ShamanBlessedMoonWater />} />
+          <Route path="/services/cleansing-and-protection" element={<CleansingAndProtection />} />
+          <Route path="/services/dream-interpretation" element={<DreamInterpretation />} />
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
