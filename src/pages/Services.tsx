@@ -2,6 +2,8 @@ import demoImg from '../assets/img/demo/demo-1.jpg';
 import northernLights from '../assets/img/northern-lights.jpg';
 import dreamImg from '../assets/img/dream.jpg'; 
 import smudgeImg from '../assets/img/smudge.jpg'; 
+import moonWaterImg from '../assets/img/moon-water.jpg'; 
+
 
 
 const textBorderStyle: React.CSSProperties = {
@@ -39,7 +41,7 @@ const Services = () => {
       <ul className="grid w-full">
         <li className="flex flex-col sm:flex-row items-start group">
           <div  className="flex flex-col sm:flex-row items-start border-2 border-transparent group-hover:border-2">
-            <img src={demoImg} alt="demo" className="w-full sm:w-1/2" />
+            <img src={moonWaterImg} alt="demo" className="w-full sm:w-1/2" />
             <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
               <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl text-[#aabcbf] text-center leading-relaxed font-light">Shaman Blessed Moon Water</h2>
