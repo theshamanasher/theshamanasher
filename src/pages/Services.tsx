@@ -1,7 +1,21 @@
 import demoImg from '../assets/img/demo/demo-1.jpg';
 import northernLights from '../assets/img/northern-lights.jpg'; // Make sure this path is correct
+import dreamImg from '../assets/img/dream.jpg'; 
+
+
+const textBorderStyle: React.CSSProperties = {
+  textShadow: `
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000
+  `,
+};
+
 
 const Services = () => {
+
+  
   return (
     <div className="flex flex-col">
       {/* Header section with background image */}
@@ -12,8 +26,8 @@ const Services = () => {
         }}
       >
         <div className="flex flex-col items-center w-full max-w-[550px] px-16">
-          <h1 className="mt-8 text-[#aabcbf] text-4xl md:text-6xl font-light">Services</h1>
-          <span className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light">
+          <h1 className="mt-8 text-[#aabcbf] text-4xl md:text-6xl font-light" style={textBorderStyle}>Services</h1>
+          <span className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light" style={textBorderStyle}>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
             Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
           </span>
@@ -58,7 +72,7 @@ const Services = () => {
 
         <li className="flex flex-col sm:flex-row items-start group">
           <a href="/services/dream-interpretation/" className="flex flex-col sm:flex-row items-start border-2 border-transparent group-hover:border-2 group-hover:border-[#495153]">
-            <img src={demoImg} alt="demo" className="w-full sm:w-1/2" />
+            <img src={dreamImg} alt="demo" className="w-full sm:w-1/2" />
             <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
               <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl text-[#aabcbf] text-center leading-relaxed font-light">Dream Interpretation</h2>
