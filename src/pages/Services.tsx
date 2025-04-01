@@ -38,7 +38,7 @@ const Services = () => {
       {/* Services grid */}
       <ul className="grid w-full">
         <li className="flex flex-col sm:flex-row items-start group">
-          <a href="/services/shamam-blessed-moon-water/" className="flex flex-col sm:flex-row items-start border-2 border-transparent group-hover:border-2 group-hover:border-[#495153]">
+          <div  className="flex flex-col sm:flex-row items-start border-2 border-transparent group-hover:border-2">
             <img src={demoImg} alt="demo" className="w-full sm:w-1/2" />
             <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
               <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
@@ -51,11 +51,11 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </div>
         </li>
 
         <li className="flex flex-col sm:flex-row-reverse items-start group">
-          <a href="/services/cleansing-and-protection/" className="flex flex-col sm:flex-row-reverse items-start border-2 border-transparent group-hover:border-2 group-hover:border-[#495153]">
+          <div className="flex flex-col sm:flex-row-reverse items-start border-2 border-transparent group-hover:border-2">
             <img src={smudgeImg} alt="demo" className="w-full sm:w-1/2" />
             <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
               <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
@@ -68,11 +68,11 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </div>
         </li>
 
         <li className="flex flex-col sm:flex-row items-start group">
-          <a href="/services/dream-interpretation/" className="flex flex-col sm:flex-row items-start border-2 border-transparent group-hover:border-2 group-hover:border-[#495153]">
+          <div className="flex flex-col sm:flex-row items-start border-2 border-transparent group-hover:border-2">
             <img src={dreamImg} alt="demo" className="w-full sm:w-1/2" />
             <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
               <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
@@ -86,7 +86,7 @@ const Services = () => {
                 </div>
               </div>
             </div>
-          </a>
+          </div>
         </li>
       </ul>
     </div>
