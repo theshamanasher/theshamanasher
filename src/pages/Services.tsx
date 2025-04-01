@@ -16,8 +16,6 @@ const textBorderStyle: React.CSSProperties = {
 
 
 const Services = () => {
-
-  
   return (
     <div className="flex flex-col">
       {/* Header section with background image */}
