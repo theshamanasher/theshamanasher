@@ -1,4 +1,3 @@
-import demoImg from '../assets/img/demo/demo-1.jpg';
 import northernLights from '../assets/img/northern-lights.jpg';
 import dreamImg from '../assets/img/dream.jpg'; 
 import smudgeImg from '../assets/img/smudge.jpg'; 
