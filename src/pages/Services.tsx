@@ -1,6 +1,7 @@
 import demoImg from '../assets/img/demo/demo-1.jpg';
-import northernLights from '../assets/img/northern-lights.jpg'; // Make sure this path is correct
+import northernLights from '../assets/img/northern-lights.jpg';
 import dreamImg from '../assets/img/dream.jpg'; 
+import smudgeImg from '../assets/img/smudge.jpg'; 
 
 
 const textBorderStyle: React.CSSProperties = {
@@ -55,7 +56,7 @@ const Services = () => {
 
         <li className="flex flex-col sm:flex-row-reverse items-start group">
           <a href="/services/cleansing-and-protection/" className="flex flex-col sm:flex-row-reverse items-start border-2 border-transparent group-hover:border-2 group-hover:border-[#495153]">
-            <img src={demoImg} alt="demo" className="w-full sm:w-1/2" />
+            <img src={smudgeImg} alt="demo" className="w-full sm:w-1/2" />
             <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
               <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
                 <h2 className="text-2xl sm:text-3xl md:text-5xl text-[#aabcbf] text-center leading-relaxed font-light">Smudging - House Cleansing and Protection</h2>
