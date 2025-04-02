@@ -1,9 +1,25 @@
-import northernLights from '../assets/img/northern-lights.jpg';
-import dreamImg from '../assets/img/dream.jpg'; 
-import smudgeImg from '../assets/img/smudge.jpg'; 
-import moonWaterImg from '../assets/img/moon-water.jpg'; 
+import northernLights from "../assets/img/northern-lights.jpg";
+import dreamImg from "../assets/img/dream.jpg";
+import smudgeImg from "../assets/img/smudge.jpg";
+import moonWaterImgTall from "../assets/img/moon-water-tall.jpg";
 
-
+const services = [
+  {
+    title: "Shaman Blessed Moon Water",
+    image: moonWaterImgTall,
+    href: "/services/shaman-blessed-moon-water/",
+  },
+  {
+    title: "Smudging - House Cleansing",
+    image: smudgeImg,
+    href: "/services/cleansing-and-protection/",
+  },
+  {
+    title: "Dream Interpretation",
+    image: dreamImg,
+    href: "/services/dream-interpretation/",
+  },
+];
 
 const textBorderStyle: React.CSSProperties = {
   textShadow: `
@@ -14,80 +30,92 @@ const textBorderStyle: React.CSSProperties = {
   `,
 };
 
-
 const Services = () => {
   return (
     <div className="flex flex-col">
-      {/* Header section with background image */}
-      <div 
-        className="flex w-full justify-center py-64 sm:py-[120px] border-b-2 bg-cover bg-no-repeat bg-center"
-        style={{ 
+      {/* Hero Section */}
+      <div
+        className="flex w-full justify-center py-24 md:py-32 lg:py-48 border-b-2 bg-cover bg-center"
+        style={{
           backgroundImage: `linear-gradient(rgba(54, 153, 173, 0.8), rgba(0, 0, 0, 0.8)), url(${northernLights})`,
         }}
       >
-        <div className="flex flex-col items-center w-full max-w-[550px] px-16">
-          <h1 className="mt-8 text-[#aabcbf] text-4xl md:text-6xl font-light" style={textBorderStyle}>Services</h1>
-          <span className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light" style={textBorderStyle}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+        <div className="flex flex-col items-center w-full max-w-4xl px-6">
+          <h1
+            className="mt-6 text-[#aabcbf] text-4xl md:text-5xl lg:text-6xl font-light tracking-wide"
+            style={textBorderStyle}
+          >
+            Sacred Services
+          </h1>
+          <span
+            className="text-base md:text-lg text-[#aabcbf] mt-8 md:mt-12 text-center leading-relaxed max-w-2xl"
+            style={textBorderStyle}
+          >
+            Transformative spiritual services blending ancient wisdom with
+            modern practice
           </span>
         </div>
       </div>
 
-      {/* Services grid */}
-      <ul className="grid w-full">
-        <li className="flex flex-col sm:flex-row items-start group">
-          <div  className="flex flex-col sm:flex-row items-start border-2 border-transparent group-hover:border-2">
-            <img src={moonWaterImg} alt="demo" className="w-full sm:w-1/2" />
-            <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
-              <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
-                <h2 className="text-2xl sm:text-3xl md:text-5xl text-[#aabcbf] text-center leading-relaxed font-light">Shaman Blessed Moon Water</h2>
-                <div className="flex flex-col gap-32 items-center h-full">
-                  <span className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
+      {/* Services Cards */}
+      <div className="py-16 px-4 sm:px-8 lg:px-16">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-light text-[#aabcbf] text-center mb-12 md:mb-16">
+            Featured Offerings
+          </h2>
 
-        <li className="flex flex-col sm:flex-row-reverse items-start group">
-          <div className="flex flex-col sm:flex-row-reverse items-start border-2 border-transparent group-hover:border-2">
-            <img src={smudgeImg} alt="demo" className="w-full sm:w-1/2" />
-            <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
-              <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
-                <h2 className="text-2xl sm:text-3xl md:text-5xl text-[#aabcbf] text-center leading-relaxed font-light">Smudging - House Cleansing and Protection</h2>
-                <div className="flex flex-col gap-32 items-center h-full">
-                  <span className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light">
-                    Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-                    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
+          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]">
+            {" "}
+            {/* Changed to gap-8 (32px) */}
+            {services.map((service, index) => (
+              <li
+                key={index}
+                className="group relative bg-[#191919] rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-2"
+              >
+                <a href={service.href}>
+                  {/* Image Container */}
+                  <div className="relative h-[400px] overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110 scale-105"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                    <h3 className="absolute bottom-0 left-0 right-0 text-3xl font-medium text-[#aabcbf] p-6 md:p-8">
+                      {service.title}
+                    </h3>
+                  </div>
 
-        <li className="flex flex-col sm:flex-row items-start group">
-          <div className="flex flex-col sm:flex-row items-start border-2 border-transparent group-hover:border-2">
-            <img src={dreamImg} alt="demo" className="w-full sm:w-1/2" />
-            <div className="container flex w-full sm:w-1/2 justify-center items-center h-full bg-[#191919]">
-              <div className="flex flex-col items-center flex-s justify-start p-32 sm:p-64 h-full max-h-[550px]">
-                <h2 className="text-2xl sm:text-3xl md:text-5xl text-[#aabcbf] text-center leading-relaxed font-light">Dream Interpretation</h2>
-                <div className="flex flex-col gap-32 items-center h-full">
-                  <span className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light">
-                    Dreams are powerful, sacred messages from the subconscious, often offering profound insight, guidance, and healing. 
-                    I offer Dream Interpretation services to help you decode the messages hidden within your dreams. 
-                    Whether vivid or fleeting, dreams hold valuable clues about your inner world, spiritual journey, and emotional state.
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </li>
-      </ul>
+                  {/* Card Content */}
+                  <div className="p-6 md:p-8">
+                    <button className="w-full flex items-center justify-between py-4 px-6 bg-[#2c3e42]/50 hover:bg-[#36596b] rounded-lg transition-all duration-300">
+                      <span className="text-[#aabcbf] text-sm font-medium">
+                        Discover More
+                      </span>
+                      <svg
+                        className="w-5 h-5 text-[#aabcbf]"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M9 5l7 7-7 7"
+                        />
+                      </svg>
+                    </button>
+                  </div>
+
+                  {/* Hover Border Effect */}
+                  <div className="absolute inset-0 rounded-2xl border-2 border-transparent group-hover:border-[#aabcbf]/20 pointer-events-none transition-all" />
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };

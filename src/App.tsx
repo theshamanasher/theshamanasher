@@ -15,12 +15,10 @@ import Title from './components/Title';
 import BlogGrid from './components/BlogGrid';
 // import Instagram from './components/Instagram';
 
-import demo1 from './assets/img/demo/demo-1.jpg'
-import demo3 from './assets/img/demo/demo-3.jpg'
-import demo4 from './assets/img/demo/demo-4.jpg'
-import demo6 from './assets/img/demo/demo-5.jpg'
-import demo7 from './assets/img/demo/demo-6.jpg'
 
+import dreamImg from "./assets/img/dream.jpg";
+import smudgeImg from "./assets/img/smudge.jpg";
+import moonWaterImgTall from "./assets/img/moon-water-tall.jpg";
 
 
 
@@ -42,7 +40,7 @@ function App() {
       />
     </div>
 
-    <div className="flex w-full  m-auto mt-32 sm:mt-64 max-w-screen-xxl">
+    <div className="flex w-full  m-auto mt-32 sm:mt-64 h-full max-h-[400px] w-full max-w-[1114px]">
       <Swiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
@@ -53,19 +51,19 @@ function App() {
         scrollbar={{ draggable: true }}
       >
          <SwiperSlide>
-          <img className='w-full' src={demo7} />
+          <a href="/services/dream-interpretation/">
+            <img className='w-full' src={dreamImg} />
+          </a>
         </SwiperSlide>
          <SwiperSlide>
-          <img className='w-full' src={demo6} />
+          <a href="/services/cleansing-and-protection/">
+            <img className='w-full' src={smudgeImg} />
+          </a>
         </SwiperSlide>
         <SwiperSlide>
-          <img className='w-full' src={demo3} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className='w-full' src={demo1} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className='w-full' src={demo4} />
+          <a href="/services/shaman-blessed-moon-water/">
+            <img className='w-full' src={moonWaterImgTall} />
+          </a>
         </SwiperSlide>
       </Swiper>
     </div>
