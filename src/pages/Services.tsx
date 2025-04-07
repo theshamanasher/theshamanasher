@@ -35,7 +35,7 @@ const Services = () => {
     <div className="flex flex-col">
       {/* Hero Section */}
       <div
-        className="flex w-full justify-center py-24 md:py-32 lg:py-48 border-b-2 bg-cover bg-center"
+        className="flex w-full justify-center py-24 md:py-32 lg:py-48 border-b-2 bg-cover bg-center h-[250px] sm:h-[400px]"
         style={{
           backgroundImage: `linear-gradient(rgba(54, 153, 173, 0.8), rgba(0, 0, 0, 0.8)), url(${northernLights})`,
         }}

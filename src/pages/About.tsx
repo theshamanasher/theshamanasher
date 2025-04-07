@@ -96,7 +96,7 @@ const About = () => {
 
             <div className="w-full max-w-[1080px] mt-64 flex flex-col items-center">
               <div className='sm:mt-64 flex flex-col items-center w-full'>
-                <span>About</span>
+                <span className="text-[#aabcbf] font-light  leading-2">About</span>
                 <Title title="The Shaman Asher" />
               </div>
               

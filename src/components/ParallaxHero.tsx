@@ -21,6 +21,7 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({
     backgroundSize: "cover",
     height: "500px",
     position: "relative",
+    zIndex: -1, 
   };
 
   const textBorderStyle: React.CSSProperties = {
