@@ -43,7 +43,7 @@ const ShamanBlessedMoonWater = () => {
             The Shaman Blessed Moonwater can be used in a variety of ways—whether you’re seeking a spiritual cleansing, supporting meditation, or simply enhancing your energy field. Each drop is a reminder of the deep connection we share with the cycles of nature, and with the moon as our guide, this water will empower you to step forward into greater harmony and balance.
             </p>
 
-            <h4 className="block text-2xl mt-[400px]">Benefits of Shaman Blessed Moonwater:</h4>
+            <h4 className="block text-2xl mt-[400px] underline">Benefits of Shaman Blessed Moonwater:</h4>
            
             <ul className="flex flex-col gap-4">
               <li className="list-disc ml-6">
