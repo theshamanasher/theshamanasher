@@ -27,7 +27,7 @@ const CleansingAndProtection = () => {
             Smudging -House Cleansing and Protection
             </h1>
             <p className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light" style={textBorderStyle}>
-              Subtitle...
+            Clearing Negative Energy and Restoring Sacred Space
             </p>
           </div>
         </div>
