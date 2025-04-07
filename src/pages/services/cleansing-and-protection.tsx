@@ -36,9 +36,6 @@ const CleansingAndProtection = () => {
         <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
           <div className="text-main-text text-lg space-y-[24px] mt-64 w-full max-w-[700px] mx-auto px-[16px]">
             <p>
-            Dreams are powerful, sacred messages from the subconscious, often offering profound insight, guidance, and healing. I offer Dream Interpretation services to help you decode the messages hidden within your dreams. Whether vivid or fleeting, dreams hold valuable clues about your inner world, spiritual journey, and emotional state. They serve as a bridge between your waking life and the deeper realms of your subconscious, often revealing wisdom, fears, desires, and messages from the spirit world.
-            </p>
-            <p>
             As a shamanic healer, I offer Smudging ceremonies designed to restore balance to your environment and energy field. Whether you are seeking to purify your home, office, or personal energy, I will guide the sacred smoke through your space or aura, setting the intention to release anything that no longer serves your highest good.
             </p>
 
