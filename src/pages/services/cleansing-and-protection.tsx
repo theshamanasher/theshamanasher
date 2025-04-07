@@ -3,8 +3,8 @@ import smudgeImg from '../../assets/img/smudge.jpg';
 
 const textBorderStyle: React.CSSProperties = {
   textShadow: `
-    -1px -1px 0 #000,
-    1px -1px 0 #000,
+    -1px -1px 0 rgb(255 255 255),
+    1px -1px 0 rgb(121 121 121),
     -1px 1px 0 #000,
     1px 1px 0 #000
   `,
@@ -24,7 +24,7 @@ const CleansingAndProtection = () => {
       >
           <div className="flex flex-col items-center w-full max-w-[550px] px-4 md:px-16">
             <h1 className="mt-8 text-[#aabcbf] text-4xl md:text-6xl font-light text-center" style={textBorderStyle}>
-            Smudging -House Cleansing and Protection
+            Smudging - Cleansing Renewing Protecting
             </h1>
             <p className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light" style={textBorderStyle}>
             Clearing Negative Energy and Restoring Sacred Space
@@ -74,10 +74,6 @@ const CleansingAndProtection = () => {
               This ritual must be done in person, and can also include the use of crystals, the closing of energetic gateways, and sacred prayers to further amplify the cleansing process. Allow the smoke to carry away what is no longer needed, leaving only the pure, positive energy that supports your highest path.
             </p>
 
-            <p>
-              Open your space to love, peace, and light—invite the sacred ritual of smudging into your life today.
-            </p>
-            
           </div>
         </section>
       </div>
