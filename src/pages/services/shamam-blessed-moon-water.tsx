@@ -35,7 +35,7 @@ const ShamanBlessedMoonWater = () => {
           <div className="text-main-text text-lg space-y-[24px] mt-64 w-full max-w-[700px] mx-auto px-[16px]">
             {/* <h2 className="text-3xl font-light mb-8">Section Title</h2> */}
             <p>
-            At the heart of my healing practice lies the power of the Moon, the ancient feminine energy that connects all things in cycles of renewal and transformation. My Shaman Blessed Moonwater can be customized to your exact desire of intentions, healing or manifestation. It is carefully crafted during the full moon, harnessing the potent energies of this sacred lunar phase. Each bottle is infused with intention, ritual, and the pure energy of the moon, creating an elixir that can help you cleanse, restore, and align your spirit.</p>
+            At the heart of my healing practice lies the power of the Moon, the ancient feminine energy that connects all things in cycles of renewal and transformation. My Shaman Blessed Moonwater <span class="underline">can be customized</span> to your exact desire of intentions, healing or manifestation. It is carefully crafted during the full moon, harnessing the potent energies of this sacred lunar phase. Each bottle is infused with intention, ritual, and the pure energy of the moon, creating an elixir that can help you cleanse, restore, and align your spirit.</p>
             <p>
             As a shaman, I offer this Moonwater to guide you through periods of emotional release, spiritual growth, and energetic healing. The water is charged under the full moon's powerful light, absorbing its healing vibrations and sacred wisdom. I then bless the water with ancient prayers and intentions to amplify its energy, ensuring it brings about transformation and protection in your life.
             </p>
@@ -43,7 +43,7 @@ const ShamanBlessedMoonWater = () => {
             The Shaman Blessed Moonwater can be used in a variety of ways—whether you’re seeking a spiritual cleansing, supporting meditation, or simply enhancing your energy field. Each drop is a reminder of the deep connection we share with the cycles of nature, and with the moon as our guide, this water will empower you to step forward into greater harmony and balance.
             </p>
 
-            <h4 className="block text-2xl mt-[400px] underline">Benefits of Shaman Blessed Moonwater:</h4>
+            <h4 className="block text-2xl mt-[400px]">Benefits of Shaman Blessed Moonwater:</h4>
            
             <ul className="flex flex-col gap-4">
               <li className="list-disc ml-6">
