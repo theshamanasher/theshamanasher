@@ -34,10 +34,50 @@ const CleansingAndProtection = () => {
         
         {/* Main Content Section */}
         <section className="max-w-6xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
-          <div className="text-main-text text-lg space-y-8">
-            <h2 className="text-3xl font-light mb-8">Section Title</h2>
-            <p>content...</p>
-            {/* Add more content sections as needed */}
+          <div className="text-main-text text-lg space-y-[24px] mt-64 w-full max-w-[700px] mx-auto px-[16px]">
+            <p>
+            Dreams are powerful, sacred messages from the subconscious, often offering profound insight, guidance, and healing. I offer Dream Interpretation services to help you decode the messages hidden within your dreams. Whether vivid or fleeting, dreams hold valuable clues about your inner world, spiritual journey, and emotional state. They serve as a bridge between your waking life and the deeper realms of your subconscious, often revealing wisdom, fears, desires, and messages from the spirit world.
+            </p>
+            <p>
+            As a shamanic healer, I offer Smudging ceremonies designed to restore balance to your environment and energy field. Whether you are seeking to purify your home, office, or personal energy, I will guide the sacred smoke through your space or aura, setting the intention to release anything that no longer serves your highest good.
+            </p>
+
+            <h4 className="block text-2xl mt-[400px]">Benefits of Smudging:</h4>
+           
+            <ul className="flex flex-col gap-4">
+              <li className="list-disc ml-6">
+              Cleansing Negative Energy: Removes built-up emotional or energetic imprints, creating a fresh, clean environment.
+              </li>
+
+              <li className="list-disc ml-6">
+              Restoring Balance: Helps realign the energy in your space or body, bringing you into harmony.
+              </li>
+
+              <li className="list-disc ml-6">
+              Protection: Creates a shield of positive energy that guards against harmful influences or negativity.
+              </li>
+
+              <li className="list-disc ml-6">
+              Spiritual Renewal: Invites peace, clarity, and connection to higher consciousness.
+              </li>
+
+              <li className="list-disc ml-6">
+              Emotional Release: Clears stress, anxiety, or lingering emotions, creating space for calm and positivity.
+              </li>
+            </ul>
+
+            <p>
+            Each Smudging ceremony is personalized to meet your specific needs. I will call upon the spirits of the sacred herbs and set clear intentions for healing and purification. Whether you are moving into a new home, clearing an office space, or simply seeking to release emotional blockages within yourself, Smudging will create an atmosphere of renewal and energetic flow.
+            </p>
+
+            <p>
+              This ritual must be done in person, and can also include the use of crystals, the closing of energetic gateways, and sacred prayers to further amplify the cleansing process. Allow the smoke to carry away what is no longer needed, leaving only the pure, positive energy that supports your highest path.
+            </p>
+
+            <p>
+              Open your space to love, peace, and light—invite the sacred ritual of smudging into your life today.
+            </p>
+            
           </div>
         </section>
       </div>
