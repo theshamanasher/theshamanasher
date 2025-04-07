@@ -3,8 +3,8 @@ import smudgeImg from '../../assets/img/smudge.jpg';
 
 const textBorderStyle: React.CSSProperties = {
   textShadow: `
-    -1px -1px 0 rgb(255 255 255),
-    1px -1px 0 rgb(121 121 121),
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000
   `,
