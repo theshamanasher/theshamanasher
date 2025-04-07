@@ -25,7 +25,7 @@ const ShamanBlessedMoonWater = () => {
             Shaman Blessed Moon Water
             </h1>
             <p className="text-base text-[#aabcbf] mt-16 sm:mt-32 text-center leading-relaxed font-light" style={textBorderStyle}>
-                Unlock the Hidden Wisdom of Your Dreams
+            A Sacred Elixir of Healing and Transformation
             </p>
           </div>
         </div>
@@ -35,11 +35,37 @@ const ShamanBlessedMoonWater = () => {
           <div className="text-main-text text-lg space-y-[24px] mt-64 w-full max-w-[700px] mx-auto px-[16px]">
             {/* <h2 className="text-3xl font-light mb-8">Section Title</h2> */}
             <p>
-            Dreams are powerful, sacred messages from the subconscious, often offering profound insight, guidance, and healing. I offer Dream Interpretation services to help you decode the messages hidden within your dreams. Whether vivid or fleeting, dreams hold valuable clues about your inner world, spiritual journey, and emotional state. They serve as a bridge between your waking life and the deeper realms of your subconscious, often revealing wisdom, fears, desires, and messages from the spirit world.</p>
+            At the heart of my healing practice lies the power of the Moon, the ancient feminine energy that connects all things in cycles of renewal and transformation. My Shaman Blessed Moonwater can be customized to your exact desire of intentions, healing or manifestation. It is carefully crafted during the full moon, harnessing the potent energies of this sacred lunar phase. Each bottle is infused with intention, ritual, and the pure energy of the moon, creating an elixir that can help you cleanse, restore, and align your spirit.</p>
             <p>
-            Through Dream Interpretation, I will guide you in understanding the symbolism, emotions, and themes present in your dreams, helping you uncover their deeper meaning. This process often reveals aspects of your life that may need attention, healing, or transformation. By interpreting these messages, you can gain clarity, release emotional blockages, and align more deeply with your true path.
+            As a shaman, I offer this Moonwater to guide you through periods of emotional release, spiritual growth, and energetic healing. The water is charged under the full moon's powerful light, absorbing its healing vibrations and sacred wisdom. I then bless the water with ancient prayers and intentions to amplify its energy, ensuring it brings about transformation and protection in your life.
             </p>
-            {/* Add more content sections as needed */}
+            <p>
+            The Shaman Blessed Moonwater can be used in a variety of ways—whether you’re seeking a spiritual cleansing, supporting meditation, or simply enhancing your energy field. Each drop is a reminder of the deep connection we share with the cycles of nature, and with the moon as our guide, this water will empower you to step forward into greater harmony and balance.
+            </p>
+
+            <h4 className="block text-2xl mt-[400px]">Benefits of Shaman Blessed Moonwater:</h4>
+           
+            <ul className="flex flex-col gap-4">
+              <li className="list-disc ml-6">
+                Cleansing & Purification: Removes negative energies, offering spiritual renewal.
+              </li>
+
+              <li className="list-disc ml-6">
+              Emotional Healing: Assists in letting go of old wounds, making space for inner peace.
+              </li>
+
+              <li className="list-disc ml-6">
+              Manifestation & Growth: Helps to align your desires with the natural flow of the universe, encouraging your intentions to manifest with clarity.
+              </li>
+
+              <li className="list-disc ml-6">
+              Energetic Protection: Shields and fortifies your auric field, creating an energetic barrier against negativity.
+              </li>
+            </ul>
+
+            <p>
+            Experience the power of the full moon, brought directly to you through this sacred, shamanic blessing. Reach out to learn more or to receive your own bottle of Shaman Blessed Moonwater.
+            </p>
           </div>
         </section>
       </div>
