@@ -2,8 +2,14 @@ import northernLights from "../assets/img/northern-lights.jpg";
 import dreamImg from "../assets/img/dream.jpg";
 import smudgeImg from "../assets/img/smudge.jpg";
 import moonWaterImgTall from "../assets/img/moon-water-tall.jpg";
+import chakaAlignmentImg from "../assets/img/chakra-alignment.jpg";
 
 const services = [
+  {
+    title: "Chakra Alignment",
+    image: chakaAlignmentImg,
+    href: "/services/chakra-alignment/",
+  },
   {
     title: "Shaman Blessed Moon Water",
     image: moonWaterImgTall,
@@ -64,7 +70,7 @@ const Services = () => {
             Featured Offerings
           </h2>
 
-          <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-[32px]">
+          <ul className="grid grid-cols-1 md:grid-cols-2  gap-[32px]">
             {" "}
             {/* Changed to gap-8 (32px) */}
             {services.map((service, index) => (
