@@ -55,6 +55,7 @@ function App() {
               }
             
               if (typeof swiper.params.navigation !== 'boolean') {
+                alert('good')
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
               }
