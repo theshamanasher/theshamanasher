@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import "./App.css";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
@@ -25,6 +25,11 @@ import moonWaterImgTall from "./assets/img/moon-water-tall.jpg";
 function App() {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+  const [swiperReady, setSwiperReady] = useState(false);
+  
+  useEffect(() => {
+    setSwiperReady(true);
+  }, []);
 
   return (
     <>
@@ -45,31 +50,36 @@ function App() {
 
       <div className="flex w-full m-auto mt-32 sm:mt-64 h-full max-h-[400px] max-w-[1114px] px-8">
         <div className="relative w-full">
+        {swiperReady && (
           <Swiper
-            modules={[Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={50}
-            slidesPerView={1}
-            onBeforeInit={(swiper) => {
-              if (!swiper.params.navigation) {
-                swiper.params.navigation = {};
-              }
-            
-              if (typeof swiper.params.navigation !== 'boolean') {
-                alert('good')
+          modules={[Navigation, Pagination, Scrollbar, A11y]}
+          spaceBetween={50}
+          slidesPerView={1}
+          navigation={{
+            prevEl: prevRef.current,
+            nextEl: nextRef.current,
+          }}
+          pagination={{
+            clickable: true,
+            el: ".swiper-pagination",
+          }}
+          scrollbar={{ draggable: true }}
+          className="h-full max-w-[90%]"
+          onSwiper={(swiper) => {
+            // Re-initialize navigation after refs are set
+            setTimeout(() => {
+              if (
+                swiper.params.navigation &&
+                typeof swiper.params.navigation !== "boolean"
+              ) {
                 swiper.params.navigation.prevEl = prevRef.current;
                 swiper.params.navigation.nextEl = nextRef.current;
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
               }
-            }}
-            navigation={{
-              prevEl: prevRef.current,
-              nextEl: nextRef.current,
-            }}
-            pagination={{
-              clickable: true,
-              el: ".swiper-pagination",
-            }}
-            scrollbar={{ draggable: true }}
-            className="h-full max-w-[90%]"
+            });
+          }}
           >
             <SwiperSlide>
               <p className="my-8 text-[#aabcbf] font-light text-center">
@@ -104,6 +114,7 @@ function App() {
               </a>
             </SwiperSlide>
           </Swiper>
+          )}
 
           <div className="absolute top-1/2 -translate-y-1/2 w-full flex justify-between z-20 pointer-events-none">
             <button
