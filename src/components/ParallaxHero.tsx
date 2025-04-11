@@ -21,7 +21,7 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({
     backgroundSize: "cover",
     height: "500px",
     position: "relative",
-    zIndex: -1, 
+    zIndex: -1,
   };
 
   const textBorderStyle: React.CSSProperties = {
@@ -39,18 +39,19 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({
       className="flex justify-center sm:justify-start items-center"
     >
       <div className="absolute inset-0 bg-black/20" style={{ zIndex: 1 }} />
-      <div 
-        id="innerContainer" 
+      <div className="w-full max-w-screen-2xl mx-auto">
+      <div
+        id="innerContainer"
         className="flex flex-col justify-start items-center sm:items-start sm:ml-10 px-4 sm:px-16 relative z-20 w-full max-w-[750px] transform translate-y-[-40%] md:translate-y-0"
       >
-        <h1 
+        <h1
           className="text-white text-3xl sm:text-4xl md:text-6xl font-bold text-center"
           style={textBorderStyle}
         >
           {title}
         </h1>
         {subtitle1 && (
-          <p 
+          <p
             className="mt-8 text-white text-lg sm:text-xl md:text-2xl text-center sm:text-left"
             style={textBorderStyle}
           >
@@ -58,7 +59,7 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({
           </p>
         )}
         {subtitle2 && (
-          <p 
+          <p
             className="mt-8 text-white text-lg sm:text-xl md:text-2xl text-center sm:text-left"
             style={textBorderStyle}
           >
@@ -66,6 +67,8 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({
           </p>
         )}
       </div>
+      </div>
+    
     </div>
   );
 };
