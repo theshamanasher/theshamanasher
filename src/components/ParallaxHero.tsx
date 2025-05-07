@@ -38,7 +38,7 @@ const ParallaxHero: React.FC<HeroSectionProps> = ({
       style={sectionStyle}
       className="flex justify-center sm:justify-start items-center"
     >
-      <div className="absolute inset-0 bg-black/20" style={{ zIndex: 1 }} />
+      <div className="absolute inset-0 bg-black/30" style={{ zIndex: 1 }} />
       <div className="w-full max-w-screen-2xl mx-auto">
       <div
         id="innerContainer"
