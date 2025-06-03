@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-
-import "./App.css";
+// import "./App.css";
 import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 
