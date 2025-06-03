@@ -2,6 +2,8 @@ import { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import ContactLoader from "../ux/ContactLoader";
 
+const MOCK_EMAIL = true; // Set to false for production!
+
 const Contact: React.FC = () => {
   const [successfulSubmission, setSuccessfulSubmission] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -14,24 +16,36 @@ const Contact: React.FC = () => {
     setError(false);
 
     if (form.current) {
-      emailjs
-        .sendForm(
-          "service_7vlvm3u", // Your EmailJS service ID
-          "template_fdjfxht", // Your EmailJS template ID
-          form.current,
-          "3s4MnL3-iCP2IDB21" // Your EmailJS public key
-        )
-        .then(
-          () => {
-            setLoading(false);
-            setSuccessfulSubmission(true);
-          },
-          (err) => {
-            setLoading(false);
-            setError(true);
-            console.log("FAILED...", err.text);
-          }
-        );
+      if (MOCK_EMAIL) {
+        // ====== MOCK MODE =======
+        setTimeout(() => {
+          setLoading(false);
+          setSuccessfulSubmission(true);
+          // To test error state, comment above and uncomment below:
+          // setLoading(false);
+          // setError(true);
+        }, 2000);
+      } else {
+        // ====== REAL EMAILJS =======
+        emailjs
+          .sendForm(
+            "service_7vlvm3u",
+            "template_fdjfxht",
+            form.current,
+            "3s4MnL3-iCP2IDB21"
+          )
+          .then(
+            () => {
+              setLoading(false);
+              setSuccessfulSubmission(true);
+            },
+            (err) => {
+              setLoading(false);
+              setError(true);
+              console.log("FAILED...", err.text);
+            }
+          );
+      }
     }
   };
 

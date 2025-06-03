@@ -1,0 +1,19 @@
+.loader-29 {
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.1em currentColor,
+    -0.5em -0.5em 0 -0.4em currentColor, 0 -0.7em 0 -0.4em currentColor,
+    0.5em -0.5em 0 -0.4em currentColor, -0.5em 0.5em 0 -0.4em currentColor,
+    0 0.7em 0 -0.4em currentColor, 0.5em 0.5em 0 -0.4em currentColor,
+    -0.7em 0 0 -0.4em currentColor, 0.7em 0 0 -0.4em currentColor;
+  animation: loader-29-spin 5s linear infinite;
+  width: 1em;
+  height: 1em;
+}
+@keyframes loader-29-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
